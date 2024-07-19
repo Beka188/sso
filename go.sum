@@ -1,5 +1,7 @@
 github.com/Beka188/protos v0.0.1 h1:utkq0OKunkdLQpsfXmAQRIWXrs9NzP79T7E2i43cPLE=
 github.com/Beka188/protos v0.0.1/go.mod h1:ZxkDlhN1XKNg/6K+rdA66fN7j/KdnWkvMbT6tQlEwS4=
+github.com/Beka188/protos v0.0.3 h1:0NVHbGcMrUAScL5ojXr4Vr9QifI54L34xkkK6tXnjDY=
+github.com/Beka188/protos v0.0.3/go.mod h1:ZxkDlhN1XKNg/6K+rdA66fN7j/KdnWkvMbT6tQlEwS4=
 github.com/BurntSushi/toml v1.2.1 h1:9F2/+DoOYIOksmaJFPw1tGFy1eDnIJXg+UHjuD8lTak=
 github.com/BurntSushi/toml v1.2.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/golang-jwt/jwt/v5 v5.0.0 h1:1n1XNM9hk7O9mnQoNBGolZvzebBQ7p93ULHRc28XJUE=

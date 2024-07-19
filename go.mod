@@ -3,7 +3,7 @@ module sso
 go 1.22
 
 require (
-	github.com/Beka188/protos v0.0.1
+	github.com/Beka188/protos v0.0.3
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	google.golang.org/grpc v1.65.0
 )

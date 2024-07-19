@@ -2,11 +2,38 @@ package grpcapp
 
 import (
 	"fmt"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log/slog"
 	"net"
+	"sso/internal/domain/models"
 	authgrpc "sso/internal/grpc/auth"
+	"sso/internal/lib/jwt"
+	"time"
 )
+
+type AuthImpl struct {
+}
+
+func (a AuthImpl) Login(ctx context.Context, email string, password string, appId int32) (string, error) {
+	//TODO ...
+	// Implement the logic here
+	token, err := jwt.NewToken(models.User{Email: email, PassHash: []byte(password)}, models.App{ID: 1, Name: "f"}, time.Duration(100))
+	if err != nil {
+		return "", err
+	}
+	return token, nil
+}
+
+func (a AuthImpl) RegisterNewUser(ctx context.Context, email string, password string) (int64, error) {
+	// TODO ...
+	return -1, nil
+}
+
+func (a AuthImpl) IsAdmin(ctx context.Context, userId int64) (bool, error) {
+	// TODO ...
+	return false, nil
+}
 
 type App struct {
 	log        *slog.Logger
@@ -16,7 +43,7 @@ type App struct {
 
 func New(log *slog.Logger, port int) *App {
 	gRPCServer := grpc.NewServer()
-	authgrpc.Register(gRPCServer)
+	authgrpc.Register(gRPCServer, AuthImpl{})
 	return &App{log, gRPCServer, port}
 }
 
